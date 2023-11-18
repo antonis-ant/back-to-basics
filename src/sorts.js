@@ -39,6 +39,21 @@ const insertionSort = (list) => {
     return list;
 };
 
+const selectionSort = (list) => {
+    for (let i = 0; i < list.length; i++) {
+        let currentMinimumIndex = i;
+        for (let j = i; j < list.length; j++) {
+            if (list[j] < list[currentMinimumIndex]) {
+                currentMinimumIndex = j;
+            }
+        }
+
+        swap(list, i, currentMinimumIndex)
+    }
+
+    return list;
+};
+
 
 const swap = (array, i1, i2) => {
     const tmp = array[i1];
@@ -46,4 +61,4 @@ const swap = (array, i1, i2) => {
     array[i2] = tmp;
 }
 
-module.exports = { bubbleSort, insertionSort };
+module.exports = { bubbleSort, insertionSort, selectionSort };
