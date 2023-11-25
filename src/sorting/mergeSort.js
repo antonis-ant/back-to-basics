@@ -1,3 +1,10 @@
+/**
+ * Time Complexity O(nlogn)
+ * Space Complexity O(n)
+ * 
+ * @param {*} arr 
+ * @returns sorted list
+ */
 const mergeSort = (arr) => {
     if (arr.length < 2) {
         return;
