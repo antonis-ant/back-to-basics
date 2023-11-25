@@ -10,9 +10,7 @@ const mergeSort = (arr) => {
         return;
     }
 
-    const middle = Math.floor(arr.length / 2);
-    let leftArr = arr.slice(0, middle);
-    let rightArr = arr.slice(middle);
+    const [leftArr, rightArr] = splitInHalf(arr);
 
     mergeSort(leftArr);
     mergeSort(rightArr);
@@ -40,6 +38,11 @@ const merge = (left, right, arr) => {
     while (r < right.length) {
         arr[k++] = right[r++];
     }
+};
+
+const splitInHalf = (arr) => {
+    const middle = Math.floor(arr.length / 2);
+    return [arr.slice(0, middle), arr.slice(middle)];
 };
 
 module.exports = { mergeSort };
