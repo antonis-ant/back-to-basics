@@ -10,7 +10,7 @@ const mergeSort = (arr) => {
         return;
     }
 
-    const [leftArr, rightArr] = splitInHalf(arr);
+    const [leftArr, rightArr] = divide(arr);
 
     mergeSort(leftArr);
     mergeSort(rightArr);
@@ -40,7 +40,7 @@ const merge = (left, right, arr) => {
     }
 };
 
-const splitInHalf = (arr) => {
+const divide = (arr) => {
     const middle = Math.floor(arr.length / 2);
     return [arr.slice(0, middle), arr.slice(middle)];
 };
