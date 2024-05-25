@@ -1,1 +1,1 @@
-An implementation of common algorithms and data structures
+Implementations of basic algorithms and data structures in javascript
